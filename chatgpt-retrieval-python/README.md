@@ -16,19 +16,20 @@ Place your own data into `data/data.txt`.
 
 ## Example usage
 Test reading `data/data.txt` file.
-```
+```sh
 > python chatgpt.py "what is my dog's name"
 Your dog's name is Sunny.
 ```
 
 Test reading `data/cat.pdf` file.
-```
+```sh
 > python chatgpt.py "what is my cat's name"
 Your cat's name is Muffy.
 ```
 
 ## Using Docker
-```
+```sh
 > docker build -t chatgpt/pyhton .
-> docker run chatgpt/pyhton
+
+> docker run -v "`pwd`/chroma":/usr/app/chroma chatgpt/python "what is my dog's name?"
 ```
